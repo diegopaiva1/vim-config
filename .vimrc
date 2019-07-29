@@ -21,7 +21,7 @@ set fileencoding=utf-8          " The encoding written to file
 set showcmd                     " Show command as it's being entered in the right bottom of the screen
 set number                      " Display the current line as absolut 
 set relativenumber              " Display all other lines as relative
-
+set hidden                      " Let edited buffers in the background
 
 
 """ Appearence
@@ -53,7 +53,9 @@ nnoremap <silent> <F3> :NERDTreeToggle<CR>
 " Fuzzy find files with CTRL-P
 nnoremap <C-p> :Files<CR>
 
-
+" Switch between buffers using CTRL-H and CTRL-L
+nnoremap <C-h> :bnext<CR>
+nnoremap <C-l> :bprevious<CR>
 
 """ NERDTree settings
 
