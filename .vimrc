@@ -28,9 +28,18 @@ set hidden                      " Let edited buffers in the background
 
 syntax on                       " Syntax highlighting
 filetype plugin indent on       " Turns on 'detection', 'plugin' and 'indent' at once 
-colorscheme dracula             " Current favorite colorscheme
+set background=dark
 
+" OceanicNext colorscheme dependency
+if (has("termguicolors"))       
+  set termguicolors
+endif
 
+colorscheme OceanicNext         " Current favorite colorscheme
+
+" Some other cool colorschemes that may be used
+" colorscheme PaperColor
+" colorscheme dracula
 
 """ Tab settings
 
@@ -70,4 +79,7 @@ let g:NERDTreeShowHidden=1      " Show hidden files (e.g .gitignore)
 
 
 " Miscellaneous
-let g:EditorConfig_exclude_patterns = ['fugitive://.\*'] " Ensure that vim-editorconfig will work well with vim-fugitive
+let g:EditorConfig_exclude_patterns = ['fugitive://.\*']   " Ensure that vim-editorconfig will work well with vim-fugitive
+let g:airline#extensions#tabline#enabled = 1               " Display current buffers in the top of the screen
+let g:airline#extensions#tabline#formatter = 'unique_tail' " Display file name only in tab
+let g:airline_theme='oceanicnext'                          " Vim airline theme

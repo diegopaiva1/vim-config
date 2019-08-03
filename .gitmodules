@@ -55,3 +55,9 @@
 [submodule "bundle/vim-nerdtree-syntax-highlight"]
 	path = bundle/vim-nerdtree-syntax-highlight
 	url = https://github.com/tiagofumo/vim-nerdtree-syntax-highlight.git
+[submodule "bundle/papercolor-theme"]
+	path = bundle/papercolor-theme
+	url = https://github.com/NLKNguyen/papercolor-theme.git
+[submodule "bundle/oceanic-next"]
+	path = bundle/oceanic-next
+	url = https://github.com/mhartington/oceanic-next.git
