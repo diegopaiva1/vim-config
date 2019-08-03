@@ -62,9 +62,17 @@ nnoremap <silent> <F3> :NERDTreeToggle<CR>
 " Fuzzy find files with CTRL-P
 nnoremap <C-p> :Files<CR>
 
-" Switch between buffers using CTRL-H and CTRL-L
+" Navigate between buffers using CTRL-H and CTRL-L
 nnoremap <C-h> :bnext<CR>
 nnoremap <C-l> :bprevious<CR>
+
+" Close current buffer with CTRL-W
+nnoremap <C-w> :bd<CR>
+
+" Save files with CTRL-S. You may need to add the the following two commands in your ~/.bashrc: (i) bind -r '\C-s' (ii) stty -ixon
+nnoremap <C-s> :w<CR>
+inoremap <C-s> <Esc>:w<CR>l 
+vnoremap <C-s> <Esc>:w<CR> 
 
 """ NERDTree settings
 
