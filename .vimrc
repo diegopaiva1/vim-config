@@ -86,8 +86,12 @@ let g:NERDTreeShowHidden=1      " Show hidden files (e.g .gitignore)
 
 
 
-" Miscellaneous
-let g:EditorConfig_exclude_patterns = ['fugitive://.\*']   " Ensure that vim-editorconfig will work well with vim-fugitive
+""" Vim airline settings
+let g:airline_theme='oceanicnext'                          " Vim airline theme
 let g:airline#extensions#tabline#enabled = 1               " Display current buffers in the top of the screen
 let g:airline#extensions#tabline#formatter = 'unique_tail' " Display file name only in tab
-let g:airline_theme='oceanicnext'                          " Vim airline theme
+
+
+
+""" Miscellaneous
+let g:EditorConfig_exclude_patterns = ['fugitive://.\*']   " Ensure that vim-editorconfig will work well with vim-fugitive
