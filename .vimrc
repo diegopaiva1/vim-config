@@ -19,19 +19,20 @@ execute pathogen#infect()
 set encoding=utf-8              " The encoding displayed
 set fileencoding=utf-8          " The encoding written to file
 set showcmd                     " Show command as it's being entered in the right bottom of the screen
-set number                      " Display the current line as absolut 
+set number                      " Display the current line as absolut
 set relativenumber              " Display all other lines as relative
 set hidden                      " Let edited buffers in the background
+:let mapleader = " "            " Set backspace as the leader key
 
 
 """ Appearence
 
 syntax on                       " Syntax highlighting
-filetype plugin indent on       " Turns on 'detection', 'plugin' and 'indent' at once 
-set background=dark
+filetype plugin indent on       " Turns on 'detection', 'plugin' and 'indent' at once
+set background=dark             " This is important for some themes (e.g, OceanicNext)
 
 " OceanicNext colorscheme dependency
-if (has("termguicolors"))       
+if (has("termguicolors"))
   set termguicolors
 endif
 
@@ -54,10 +55,10 @@ set backspace=indent,eol,start  " Make the backspace work like in most other pro
 """ Key bindings
 
 " Find and reveal the file for the active buffer in the NERDTree window by pressing F2
-nnoremap <silent> <F2> :NERDTreeFind<CR>    
+nnoremap <silent> <F2> :NERDTreeFind<CR>
 
 " Toggle the NERDTree window by pressing F3
-nnoremap <silent> <F3> :NERDTreeToggle<CR> 
+nnoremap <silent> <F3> :NERDTreeToggle<CR>
 
 " Fuzzy find files with CTRL-P
 nnoremap <C-p> :Files<CR>
@@ -66,13 +67,13 @@ nnoremap <C-p> :Files<CR>
 nnoremap <C-h> :bnext<CR>
 nnoremap <C-l> :bprevious<CR>
 
-" Close current buffer with CTRL-W
-nnoremap <C-w> :bd<CR>
+" Close current buffer with <Leader> + Q
+nnoremap <Leader>q :bd<CR>
 
 " Save files with CTRL-S. You may need to add the the following two commands in your ~/.bashrc: (i) bind -r '\C-s' (ii) stty -ixon
 nnoremap <C-s> :w<CR>
-inoremap <C-s> <Esc>:w<CR>l 
-vnoremap <C-s> <Esc>:w<CR> 
+inoremap <C-s> <Esc>:w<CR>l
+vnoremap <C-s> <Esc>:w<CR>
 
 """ NERDTree settings
 
@@ -87,7 +88,7 @@ let g:NERDTreeShowHidden=1      " Show hidden files (e.g .gitignore)
 
 
 """ Vim airline settings
-let g:airline_theme='oceanicnext'                          " Vim airline theme
+let g:airline_theme = 'oceanicnext'                        " Vim airline theme
 let g:airline#extensions#tabline#enabled = 1               " Display current buffers in the top of the screen
 let g:airline#extensions#tabline#formatter = 'unique_tail' " Display file name only in tab
 
