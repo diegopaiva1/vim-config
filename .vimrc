@@ -22,7 +22,7 @@ set showcmd                     " Show command as it's being entered in the righ
 set number                      " Display the current line as absolut
 set relativenumber              " Display all other lines as relative
 set hidden                      " Let edited buffers in the background
-:let mapleader = " "            " Set backspace as the leader key
+
 
 
 """ Appearence
@@ -54,6 +54,8 @@ set backspace=indent,eol,start  " Make the backspace work like in most other pro
 
 """ Key bindings
 
+:let mapleader = " "  " Set backspace as the leader key
+
 " Find and reveal the file for the active buffer in the NERDTree window by pressing F2
 nnoremap <silent> <F2> :NERDTreeFind<CR>
 
@@ -74,6 +76,8 @@ nnoremap <Leader>q :bd<CR>
 nnoremap <C-s> :w<CR>
 inoremap <C-s> <Esc>:w<CR>l
 vnoremap <C-s> <Esc>:w<CR>
+
+
 
 """ NERDTree settings
 
